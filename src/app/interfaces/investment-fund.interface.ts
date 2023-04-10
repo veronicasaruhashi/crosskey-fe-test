@@ -9,27 +9,27 @@ export interface InvestmentFund {
   currency: string;
   availableForMonthlySaving: boolean;
   redemptionMinFee: InvestmentFundValue;
-  redemptionPercent: number;
+  redemptionPercent?: number;
   subscriptionMinFee: InvestmentFundValue;
-  subscriptionPercent: number;
+  subscriptionPercent?: number;
   subscriptionMinValue: InvestmentFundValue;
-  investmentClass: any; // TODO set type
-  permissions: InvestmentFundPermission;
-  buyCommissions: any; // TODO set type
-  sellCommissions: any; // TODO set type
+  investmentClass?: string;
+  permissions?: InvestmentFundPermission;
+  buyCommissions?: number;
+  sellCommissions?: number;
   change1m: number;
   change3m: number;
   change3y: number;
-  minimumCommission: any; // TODO set type
-  technicalCommission: any; // TODO set type
-  technicalCommissionUp: any; // TODO set type
-  sellCommission: any; // TODO set type
+  minimumCommission?: number;
+  technicalCommission?: number;
+  technicalCommissionUp?: number;
+  sellCommission?: number;
   administrativeFee: number;
   startDate: number;
   yearHigh: number;
   yearLow: number;
-  graphImageLink: string;
-  documents: InvestmentFundDocument[];
+  graphImageLink?: string;
+  documents?: InvestmentFundDocument[];
   fundCompany: string;
   startValue: number;
   closePrice: number;
@@ -47,7 +47,7 @@ export interface InvestmentFundPermission {
 }
 
 export interface InvestmentFundDocument {
-  url: string;
+  url?: string;
   title: string;
 }
 

@@ -8,6 +8,7 @@ import { InvestmentFundService } from './investment-fund.service';
 import { environment } from 'src/environments/environment.development';
 import { APIResponse } from '../interfaces/api-response.interface';
 import { InvestmentFund } from '../interfaces/investment-fund.interface';
+import { mockInvestmentFund } from './investment-fund.mock';
 
 describe('InvestmentFundService', () => {
   let service: InvestmentFundService;
@@ -28,19 +29,11 @@ describe('InvestmentFundService', () => {
   });
 
   describe('#getInvestmentFunds', () => {
-    let expectedData: APIResponse<InvestmentFund>;
+    let expectedData: APIResponse<InvestmentFund>[];
 
     beforeEach(() => {
       service = TestBed.inject(InvestmentFundService);
-      expectedData = {
-        status: {
-          success: true,
-          errors: [],
-          infos: [],
-          jSessionId: '1NUsNSBrbmQGYFKPdEnaK9efK0yjZIjm3iXIeFXp',
-        },
-        data: [{ mock: 1 }, { mock: 2 }] as any[],
-      };
+      expectedData = mockInvestmentFund;
     });
 
     it('should return expected list', () => {
@@ -63,7 +56,7 @@ describe('InvestmentFundService', () => {
 
       const req = httpTestingController.expectOne(environment.urlAPI);
 
-      expectedData.data = [];
+      expectedData = [];
       req.flush(expectedData);
     });
 
