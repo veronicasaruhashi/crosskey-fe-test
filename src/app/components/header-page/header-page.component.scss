@@ -1,8 +1,28 @@
 .header-page {
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
   background-color: #9c27b0;
 
+  h1 {
+    margin-bottom: 0;
+  }
+
   mat-card {
+    display: none;
     background-color: rgb(66, 66, 66, 0.4);
+  }
+}
+
+@media (min-width: 768px) {
+  /* For desktop: */
+  .header-page {
+    padding: 2rem 1.5rem;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    mat-card {
+      display: flex;
+    }
   }
 }

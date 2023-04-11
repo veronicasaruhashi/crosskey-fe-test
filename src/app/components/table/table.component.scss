@@ -1,0 +1,22 @@
+table {
+  .hide-mobile {
+    display: none;
+  }
+
+  th.right {
+    direction: rtl;
+  }
+
+  td.right {
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  /* For desktop: */
+  table {
+    .hide-mobile {
+      display: table-cell;
+    }
+  }
+}

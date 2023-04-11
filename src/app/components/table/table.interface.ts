@@ -1,8 +1,6 @@
 export interface TableColumnDefinition<T> {
   columnDef: string;
   header: string;
-  align?: TableColumnAlignement;
+  cssClass?: string;
   cell: (data: T) => string;
 }
-
-export type TableColumnAlignement = 'left' | 'right' | 'center';
