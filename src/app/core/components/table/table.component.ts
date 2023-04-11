@@ -11,6 +11,7 @@ import { MatSort } from '@angular/material/sort';
 export class TableComponent<T> {
   @ViewChild(MatSort) sort!: MatSort;
 
+  @Input() showLoading = false;
   @Input() set columns(value: TableColumnDefinition<T>[]) {
     this.columnsToDisplay = value;
     this.displayedColumns = this.columnsToDisplay.map((c) => c.columnDef);

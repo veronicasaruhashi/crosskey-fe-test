@@ -1,5 +1,5 @@
-import { InvestmentFund } from '../interfaces/investment-fund.interface';
-import { APIResponse } from '../interfaces/api-response.interface';
+import { InvestmentFund } from '../../interfaces/investment-fund.interface';
+import { APIResponse } from '../../interfaces/api-response.interface';
 
 export const mockInvestmentFund: APIResponse<InvestmentFund>[] = [
   {

@@ -6,9 +6,9 @@ import {
 
 import { InvestmentFundService } from './investment-fund.service';
 import { environment } from 'src/environments/environment.development';
-import { APIResponse } from '../interfaces/api-response.interface';
-import { InvestmentFund } from '../interfaces/investment-fund.interface';
 import { mockInvestmentFund } from './investment-fund.mock';
+import { InvestmentFund } from 'src/app/interfaces/investment-fund.interface';
+import { APIResponse } from 'src/app/interfaces/api-response.interface';
 
 describe('InvestmentFundService', () => {
   let service: InvestmentFundService;

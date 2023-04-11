@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { InvestmentFundListColumns } from 'src/app/pages/investment-fund-list/investment-fund-list.constant';
-import { mockInvestmentFund } from 'src/app/services/investment-fund.mock';
+import { mockInvestmentFund } from 'src/app/services/investment-fund/investment-fund.mock';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TableComponent', () => {

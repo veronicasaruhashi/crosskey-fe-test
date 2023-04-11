@@ -1,13 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
+import { APIResponse } from 'src/app/interfaces/api-response.interface';
+import { InvestmentFund } from 'src/app/interfaces/investment-fund.interface';
 import { environment } from 'src/environments/environment.development';
-import { APIResponse } from '../interfaces/api-response.interface';
-import { InvestmentFund } from '../interfaces/investment-fund.interface';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class InvestmentFundService {
   constructor(private httpClient: HttpClient) {}
 
