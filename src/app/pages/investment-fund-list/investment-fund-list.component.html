@@ -1,0 +1,11 @@
+<div class="investment-fund">
+  <app-header-page [pageTitle]="'Investment Funds'" [info]="info"></app-header-page>
+
+  <mat-form-field>
+    <input matInput placeholder="Type to start searching for investment funds..." #input/>
+  </mat-form-field>
+
+  <div class="investment-fund-table">
+    <app-table [data]="(source | async) ?? []" [columns]="columnsToDisplay" [filter]="input.value" [showLoading]="(loading | async) ?? false"></app-table>
+  </div>
+</div>
