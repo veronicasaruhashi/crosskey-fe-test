@@ -1,0 +1,7 @@
+<header class="header-page mat-app-background">
+  <h1>{{ pageTitle }}</h1>
+
+  <mat-card *ngIf="info">
+    <mat-card-content [innerHTML]="info"></mat-card-content>
+  </mat-card>
+</header>
